@@ -1,0 +1,29 @@
+{
+  "name": "babel",
+  "version": "1.0.0",
+  "description": "Library catalog application to keep track of my books. Users will be able to create and account and checkout books. Point of project is to practice using React.js to code the UI and practice using Django for the backend.",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HeathFeath49/Library_Catalog.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/HeathFeath49/Library_Catalog/issues"
+  },
+  "homepage": "https://github.com/HeathFeath49/Library_Catalog#readme",
+  "dependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "webpack": "^3.10.0",
+    "webpack-dev-server": "^2.11.0"
+  }
+}
