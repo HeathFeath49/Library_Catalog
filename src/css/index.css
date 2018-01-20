@@ -26,3 +26,47 @@ input{
 	margin:auto;
 	padding-top:25px;
 }
+
+#buttons{
+	cursor:pointer;
+	height:100px;
+	width:400px;
+	margin: auto;
+}
+
+#loginBtn, #signUpBtn{
+	font-size: 2.5em;
+	color:white;
+	padding:8px;
+	display: block;
+	height:100px;
+	width:175px;
+	text-align: center;
+	margin-top:15px;
+}
+
+#loginBtn{
+	float:left;
+}
+
+#signUpBtn{
+	float:right;
+}
+
+
+.selectedBtn{
+	background-color:white;
+}
+
+.notSelectedBtn{
+	background-color:blue;
+}
+
+
+
+
+
+
+
+
+
