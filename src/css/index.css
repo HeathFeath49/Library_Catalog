@@ -36,7 +36,6 @@ input{
 
 #loginBtn, #signUpBtn{
 	font-size: 2.5em;
-	color:white;
 	padding:8px;
 	display: block;
 	height:100px;
@@ -56,10 +55,12 @@ input{
 
 .selectedBtn{
 	background-color:white;
+	color:blue;
 }
 
 .notSelectedBtn{
 	background-color:blue;
+	color:white;
 }
 
 
