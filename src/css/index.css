@@ -1,5 +1,5 @@
 body{
-  background-color:yellow;
+	background-color:tan;
 }
 
 
@@ -14,36 +14,6 @@ input{
     height:20px;
 }
 
-#title{
-  text-align: center;
-  vertical-align: top;
-}
-
-#loginFormDiv{
-	background-color:blue;
-	width:400px;
-	height: 200px;
-	margin:auto;
-	padding-top:25px;
-}
-
-#buttons{
-	cursor:pointer;
-	height:100px;
-	width:400px;
-	margin: auto;
-}
-
-#loginBtn, #signUpBtn{
-	font-size: 2.5em;
-	padding:8px;
-	display: block;
-	height:100px;
-	width:175px;
-	text-align: center;
-	margin-top:15px;
-}
-
 #loginBtn{
 	float:left;
 }
@@ -51,7 +21,6 @@ input{
 #signUpBtn{
 	float:right;
 }
-
 
 .selectedBtn{
 	background-color:white;
@@ -64,7 +33,10 @@ input{
 }
 
 
-
+#test{
+	background:url('../img/bookBackground.png');
+	background-size:cover;
+}
 
 
 
