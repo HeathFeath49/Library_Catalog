@@ -1,14 +1,28 @@
 import React from 'react';
-
-
-function LargeText(props){
-	return <h1>{props.text}</h1>
+/*import image from '../../img/bookBackground.png';
+*/
+const mainHeaderStyle = {
+	backgroundColor:'#AFD275',
+ 	verticalAlign: 'top',
+ 	height:'140px',
+ 	width:'100%',
+ 	padding:'20px'
 }
+
+const titleStyle = {
+	backgroundColor:'white',
+	margin:'auto',
+	width:'30%',
+	textAlign: 'center',
+	fontSize:'3em'
+
+}
+ 
 
 function MainHeader(){
 	return(
-		<div id='title'>
-			<LargeText text = 'Library Catalog'/>
+		<div id='test' style={mainHeaderStyle}>
+			<h1 style={titleStyle}>Library Catalog</h1>
 		</div>
 	);
 }
