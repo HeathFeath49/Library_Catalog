@@ -1,8 +1,17 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import registerServiceWorker from './registerServiceWorker';
+import './css/index.css';
+import MainView from './js/components/mainView';
 
-ReactDOM.render(<App />, document.getElementById('root'));
-registerServiceWorker();
+
+
+
+function App(){
+	return (
+		<div>
+			<MainView />
+		</div>
+	);
+}
+
+ReactDOM.render(<App />,document.getElementById('root'));
