@@ -14,7 +14,7 @@ const buttonDivStyle = {
 const buttonStyle = {
 	padding:'8px',
 	display:'block',
-	height:'100px',
+	height:'70px',
 	width:'175px',
 	marginTop:'15px'
 };
@@ -64,10 +64,12 @@ class ParentForm extends React.Component{
 					<div id='loginBtn' style={buttonStyle} onClick={()=>this.updateState('login')} className={this.state.loginSelected ? "selectedBtn":"notSelectedBtn"}>Login</div>
 				</div>
 
+				
+				{this.state.signUpSelected? <SignUpForm />:<LoginForm />}
 
 
 			</div>
-			//return form needed based on state of clicked buttons
+			
 		)
 	}
 

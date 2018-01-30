@@ -5,11 +5,12 @@ function sendLoginData(){
 }
 
 const loginFormStyle = {
-	backgroundColor:'blue',
-	paddingTop:'25px',
+	backgroundColor:'tan',
+	paddingTop:'10px',
 	width:'400px',
-	height: '200px',
+	height: '300px',
 	margin:'auto',
+	textAlign:'center'
 	
 };
 
@@ -20,7 +21,7 @@ class LoginForm extends React.Component{
 			<div id='loginDiv' style={loginFormStyle}>
 				<input type='text' id='username' placeholder='Username' />
 				<input type='password' id='password' placeholder='Password' />
-				<button onClick={sendLoginData} id='loginBtn'>Enter</button>
+				<button className='enterBtn' onClick={sendLoginData} >Enter</button>
 			</div>
 		);
 	}

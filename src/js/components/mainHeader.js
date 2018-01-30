@@ -2,7 +2,7 @@ import React from 'react';
 /*import image from '../../img/bookBackground.png';
 */
 const mainHeaderStyle = {
-	backgroundColor:'#AFD275',
+	backgroundColor:'tan',
  	verticalAlign: 'top',
  	height:'140px',
  	width:'100%',
@@ -12,16 +12,18 @@ const mainHeaderStyle = {
 const titleStyle = {
 	backgroundColor:'white',
 	margin:'auto',
-	width:'30%',
+	width:'55%',
 	textAlign: 'center',
-	fontSize:'3em'
+	fontSize:'4.5em',
+	padding:'10px'
 
 }
  
 
 function MainHeader(){
 	return(
-		<div id='test' style={mainHeaderStyle}>
+		<div>
+			<div id='header' style={mainHeaderStyle}></div>
 			<h1 style={titleStyle}>Library Catalog</h1>
 		</div>
 	);

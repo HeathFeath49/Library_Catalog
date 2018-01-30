@@ -1,5 +1,8 @@
+/*'#AFD275'*/
+
 body{
-	background-color:tan;
+	background-color:white;
+	font-family: impact;
 }
 
 
@@ -23,23 +26,24 @@ input{
 }
 
 .selectedBtn{
-	background-color:white;
-	color:blue;
-}
-
-.notSelectedBtn{
-	background-color:blue;
+	background-color:tan;
 	color:white;
 }
 
+.notSelectedBtn{
+	background-color:white;
+	color:black;
+}
 
-#test{
+
+#header{
 	background:url('../img/bookBackground.png');
 	background-size:cover;
 }
 
 
-
-
-
-
+.enterBtn{
+	width:20%;
+	padding:5px;
+	margin-top:20px;
+}
