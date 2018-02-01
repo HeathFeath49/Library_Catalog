@@ -1,12 +1,14 @@
 import React from 'react';
 import MainView from './components/mainView';
+import ParentForm from './components/forms/parentForm';
 
 
 
 class App extends React.Component {
 
 	state = {
-		response: ''
+		response: '',
+		noSignIn:true
 	};
 
 	componentDidMount(){
@@ -30,6 +32,9 @@ class App extends React.Component {
 		return (
 			<div>
 				<MainView />
+				{if(this.state.notSignIn){
+					return <ParentForm />
+				}}
 			</div>
 		);
 	}
