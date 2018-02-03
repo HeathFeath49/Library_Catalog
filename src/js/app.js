@@ -1,8 +1,13 @@
 import React from 'react';
 import MainView from './components/mainView';
 import ParentForm from './components/forms/parentForm';
+import NavBar from './components/navBar';
 
-
+//// MAIN TO DO ///////
+/*
+>> Create a Style folder under js and move all styles (in javascript) there
+	and have styles imported and used in js files instead of being locally defined
+*/
 
 class App extends React.Component {
 
@@ -32,9 +37,7 @@ class App extends React.Component {
 		return (
 			<div>
 				<MainView />
-				{if(this.state.notSignIn){
-					return <ParentForm />
-				}}
+				<NavBar />
 			</div>
 		);
 	}
