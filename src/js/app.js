@@ -13,7 +13,7 @@ class App extends React.Component {
 
 	state = {
 		response: '',
-		noSignIn:true
+		view:'AccountView'
 	};
 
 	componentDidMount(){
@@ -34,10 +34,19 @@ class App extends React.Component {
 	};
 
 	render(){
+
+		var viewToRender;
+		if(this.state.view === 'Login/SignUp'){
+			viewToRender = <ParentForm />;
+		}
+		else if(this.state.view === 'AccountView'){
+			viewToRender = <NavBar />
+		}
+
 		return (
 			<div>
 				<MainView />
-				<NavBar />
+				{viewToRender}
 			</div>
 		);
 	}
