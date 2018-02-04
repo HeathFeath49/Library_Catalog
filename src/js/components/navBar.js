@@ -3,10 +3,19 @@ import React from 'react';
 const buttonStyle = {
 	padding:'8px',
 	display:'block',
-	height:'70px',
-	width:'175px',
-	marginTop:'15px'
+	height:'130px',
+	width:'220px'	
 };
+
+const buttonDivStyle = {
+	textAlign:'center',
+	fontSize:'3em',
+	cursor:'pointer',
+	height:'150px',
+	width:'237px',
+	backgroundColor:'tan'
+};
+
 
 const navContainerStyle = {
 	display:'block'
@@ -32,11 +41,11 @@ Component
 */
 
 
-
-
 function NavItem(props){
 	return (
+		<div style={buttonDivStyle}>
 			<div style={buttonStyle} onClick ={props.onClickHandle} className ={props.className} >{props.value}</div>
+		</div>
 	)
 }
 
@@ -56,7 +65,6 @@ class NavBar extends React.Component{
 	}
 
 	updateState(value){
-		console.log(value);
 		if(value !== this.state.selectedValue){
 			return this.setState({
 				selectedValue:value
@@ -68,13 +76,11 @@ class NavBar extends React.Component{
 		var className;
 
 		if(this.state.selectedValue === value){
-
 			className='selectedBtn';
 		}
 		else{
 			className='notSelectedBtn';
 		}
-
 		return className;
 	}
 
