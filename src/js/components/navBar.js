@@ -59,7 +59,8 @@ class NavBar extends React.Component{
 		this.determineClass = this.determineClass.bind(this);
 
 		this.state = {
-			selectedValue:'Library'
+			selectedValue:'Library',
+			admin:false
 		};
 
 	}
@@ -85,13 +86,16 @@ class NavBar extends React.Component{
 	}
 
 	render(){
-
+		var libEditNavItem = <NavItem value='Edit Library' onClickHandle={()=>this.updateState('Edit Library')} className={this.determineClass('Edit Library')}/>
 		return(
 
 			<div style={navContainerStyle}>
 				<NavItem value='Library' onClickHandle={()=>this.updateState('Library')} className={this.determineClass('Library')}/>
 				<NavItem value='My Checkouts' onClickHandle={()=>this.updateState('My Checkouts')} className={this.determineClass('My Checkouts')}/>
 				<NavItem value='My Account' onClickHandle={()=>this.updateState('My Account')} className={this.determineClass('My Account')}/>
+				
+				{this.state.admin? libEditNavItem : null}
+
 			</div>	
 
 		)
