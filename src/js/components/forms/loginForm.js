@@ -19,8 +19,8 @@ class LoginForm extends React.Component{
 	render(){
 		return(
 			<div id='loginDiv' style={loginFormStyle}>
-				<input type='text' id='username' placeholder='Username' />
-				<input type='password' id='password' placeholder='Password' />
+				<input type='text' id='username' placeholder='Username' ref='username' />
+				<input type='password' id='password' placeholder='Password' ref='password' />
 				<button className='enterBtn' onClick={sendLoginData} >Enter</button>
 			</div>
 		);
