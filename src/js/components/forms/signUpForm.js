@@ -16,15 +16,39 @@ function sendSignUpData(){
 
 
 class SignUpForm extends React.Component{
+
+	constructor() {
+    	super();
+    	//this.onSubmit = this.handleSubmit.bind(this);
+  	}
+
+  	/*handleSubmit(e){
+  		const self = this;
+  		
+  		e.preventDefault();
+  		fetch('/signUp',{
+  			method:'POST',
+  			headers:{ ContentType: "application/json" },
+  			body:{
+  				firstName:'Heather'
+  			}
+  		})
+  		.then(function(response){
+  			return response.json();
+  		}).then(function(body){
+  			console.log(body);
+  		});
+  	}*/
+
 	render(){
 		return(
 			<div>
-				<form style={signUpFormStyle}>
-					<input type='text' id='firstName' placeholder="First Name" />
-					<input type='text' id='lastName' placeholder="Last Name" />
-					<input type='text' id='username' placeholder='Username' />
-					<input type='password' id='password' placeholder='Password' />
-					<button className='enterBtn' onClick={sendSignUpData} >Enter</button>
+				<form action='/signUp' method='post' style={signUpFormStyle}>
+					<input type='text' id='firstName' placeholder='First Name' name='firstName'/>
+					<input type='text' id='lastName' placeholder='Last Name' name='lastName'/>
+					<input type='text' id='username' placeholder='Username' name='username'/>
+					<input type='password' id='password' placeholder='Password' name='password' />
+					<input type='submit' className='enterBtn' />
 				</form>
 				
 			</div>
