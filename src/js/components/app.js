@@ -7,31 +7,22 @@ import NavBar from './navBar';
 /*
 >> Create a Style folder under js and move all styles (in javascript) there
 	and have styles imported and used in js files instead of being locally defined
+
+>> Insert sign up data into database
+	>> Do not insert if username is not unique to database
+	>> Do not insert if email is not unique to database
+
 */
+
+
 
 class App extends React.Component {
 
 	state = {
 		response: '',
-		view:'Login/SignUp'
+		view:'AccountView'
 	};
 
-	/*componentDidMount(){
-		this.callApi()
-		.then(res => this.setState({ response: res.express }))
-		.catch(err => console.log(err));
-	}
-
-	callApi = async () => {
-		const response = await fetch('/signUp');
-		const body = await response.json();
-
-		if(response.status !== 200){
-			throw Error(body.message);
-		}
-
-		return body;
-	};*/
 
 	render(){
 
