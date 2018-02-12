@@ -1,6 +1,5 @@
 import React from 'react';
-/*import image from '../../img/bookBackground.png';
-*/
+
 const mainHeaderStyle = {
 	backgroundColor:'tan',
  	verticalAlign: 'top',

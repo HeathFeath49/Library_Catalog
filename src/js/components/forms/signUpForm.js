@@ -1,56 +1,50 @@
-import React from 'react'
+import React from 'react';
+const styles = require('../../styles');
 
-const signUpFormStyle = {
-	backgroundColor:'tan',
-	paddingTop:'10px',
-	width:'400px',
-	height: '300px',
-	margin:'auto',
-	textAlign:'center'
-}
-
-
-function sendSignUpData(){
-	console.log('sign up button clicked!!')
-}
 
 
 class SignUpForm extends React.Component{
 
 	constructor() {
     	super();
-    	//this.onSubmit = this.handleSubmit.bind(this);
+    	this.onSubmit = this.handleSubmit.bind(this);
   	}
 
-  	/*handleSubmit(e){
-  		const self = this;
-  		
-  		e.preventDefault();
+  	handleSubmit(event){
+
+  		event.preventDefault();
+  		const formData = event.target;
+
+  		const data = {
+  			firstName: formData.firstName.value,
+  			lastName: formData.lastName.value,
+  			username: formData.username.value,
+  			password: formData.password.value
+  		};
+  
   		fetch('/signUp',{
   			method:'POST',
-  			headers:{ ContentType: "application/json" },
-  			body:{
-  				firstName:'Heather'
-  			}
+  			headers: { "Content-Type": "application/json" },
+  			body:JSON.stringify(data)
   		})
-  		.then(function(response){
-  			return response.json();
-  		}).then(function(body){
-  			console.log(body);
+  		.then(response => {
+  			console.log(response,'hola');
+  		})
+  		.catch(err => {
+  			console.log(err,'not hola');
   		});
-  	}*/
+  	};
 
 	render(){
 		return(
 			<div>
-				<form action='/signUp' method='post' style={signUpFormStyle}>
+				<form onSubmit = {this.handleSubmit} style={styles.form.smallForm}>
 					<input type='text' id='firstName' placeholder='First Name' name='firstName'/>
 					<input type='text' id='lastName' placeholder='Last Name' name='lastName'/>
 					<input type='text' id='username' placeholder='Username' name='username'/>
 					<input type='password' id='password' placeholder='Password' name='password' />
 					<input type='submit' className='enterBtn' />
 				</form>
-				
 			</div>
 		);
 	}

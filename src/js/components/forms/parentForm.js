@@ -2,23 +2,7 @@ import React from 'react';
 import LoginForm from './loginForm';
 import SignUpForm from './signUpForm';
 
-const buttonDivStyle = {
-	textAlign:'center',
-	fontSize:'2.5em',
-	cursor:'pointer',
-	height:'100px',
-	width:'400px',
-	margin: 'auto'
-};
-
-const buttonStyle = {
-	padding:'8px',
-	display:'block',
-	height:'70px',
-	width:'175px',
-	marginTop:'15px'
-};
-
+const styles = require('../../styles')
 
 
 class ParentForm extends React.Component{
@@ -59,9 +43,9 @@ class ParentForm extends React.Component{
 		
 		return(
 			<div>
-				<div id='buttonDiv' style={buttonDivStyle}>
-					<div id='signUpBtn' style={buttonStyle} onClick={()=>this.updateState('signUp')} className={this.state.signUpSelected ? "selectedBtn" : "notSelectedBtn"}>Sign Up</div>
-					<div id='loginBtn' style={buttonStyle} onClick={()=>this.updateState('login')} className={this.state.loginSelected ? "selectedBtn":"notSelectedBtn"}>Login</div>
+				<div id='buttonDiv' style={styles.btn.btnWrap}>
+					<div id='signUpBtn' style={styles.btn.btnLoginSignUp} onClick={()=>this.updateState('signUp')} className={this.state.signUpSelected ? "selectedBtn" : "notSelectedBtn"}>Sign Up</div>
+					<div id='loginBtn' style={styles.btn.btnLoginSignUp} onClick={()=>this.updateState('login')} className={this.state.loginSelected ? "selectedBtn":"notSelectedBtn"}>Login</div>
 				</div>
 
 				

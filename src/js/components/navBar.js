@@ -1,50 +1,12 @@
 import React from 'react';
+const styles = require('../styles');
 
-const buttonStyle = {
-	padding:'8px',
-	display:'block',
-	height:'130px',
-	width:'220px'	
-};
-
-const buttonDivStyle = {
-	textAlign:'center',
-	fontSize:'3em',
-	cursor:'pointer',
-	height:'150px',
-	width:'237px',
-	backgroundColor:'tan'
-};
-
-
-const navContainerStyle = {
-	display:'block'
-};
-
-const selectedBtnStyle = {
-	backgroundColor:'tan',
-	color:'white'
-};
-
-const notSelectedBtnStyle = {
-	backgroundColor:'white',
-	color:'black'
-};
-
-
-/*         NOTES  
-
-// Look into using refs for accessing properties when rendering <NavItem> tags within NavBar
-Component
-
-
-*/
 
 
 function NavItem(props){
 	return (
-		<div style={buttonDivStyle}>
-			<div style={buttonStyle} onClick ={props.onClickHandle} className ={props.className} >{props.value}</div>
+		<div style={styles.btn.btnNav}>
+			<div  onClick ={props.onClickHandle} style={props.style} >{props.value}</div>
 		</div>
 	)
 }
@@ -52,11 +14,13 @@ function NavItem(props){
 
 class NavBar extends React.Component{
 
+
+
 	constructor(props){
 		super(props);
 
 		this.updateState = this.updateState.bind(this);
-		this.determineClass = this.determineClass.bind(this);
+		this.determineStyle = this.determineStyle.bind(this);
 
 		this.state = {
 			selectedValue:'Library',
@@ -73,26 +37,26 @@ class NavBar extends React.Component{
 		}
 	}
 
-	determineClass(value){
-		var className;
+	determineStyle(value){
+		var style;
 
 		if(this.state.selectedValue === value){
-			className='selectedBtn';
+			style=styles.btn.btnSelected;
 		}
 		else{
-			className='notSelectedBtn';
+			style=styles.btn.btnNotSelected;
 		}
-		return className;
+		return style;
 	}
 
 	render(){
-		var libEditNavItem = <NavItem value='Edit Library' onClickHandle={()=>this.updateState('Edit Library')} className={this.determineClass('Edit Library')}/>
+		var libEditNavItem = <NavItem value='Edit Library' onClickHandle={()=>this.updateState('Edit Library')} style={this.determineStyle('Edit Library')}/>
 		return(
 
-			<div style={navContainerStyle}>
-				<NavItem value='Library' onClickHandle={()=>this.updateState('Library')} className={this.determineClass('Library')}/>
-				<NavItem value='My Checkouts' onClickHandle={()=>this.updateState('My Checkouts')} className={this.determineClass('My Checkouts')}/>
-				<NavItem value='My Account' onClickHandle={()=>this.updateState('My Account')} className={this.determineClass('My Account')}/>
+			<div style={styles.block}>
+				<NavItem value='Library' onClickHandle={()=>this.updateState('Library')} style={this.determineStyle('Library')}/>
+				<NavItem value='My Checkouts' onClickHandle={()=>this.updateState('My Checkouts')} style={this.determineStyle('My Checkouts')}/>
+				<NavItem value='My Account' onClickHandle={()=>this.updateState('My Account')} style={this.determineStyle('My Account')}/>
 				
 				{this.state.admin? libEditNavItem : null}
 

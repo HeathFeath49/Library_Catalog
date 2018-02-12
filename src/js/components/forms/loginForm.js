@@ -1,27 +1,15 @@
 import React from 'react';
+const styles = require('../../styles');
 
-function sendLoginData(){
-	console.log('login button clicked!!');
-}
-
-const loginFormStyle = {
-	backgroundColor:'tan',
-	paddingTop:'10px',
-	width:'400px',
-	height: '300px',
-	margin:'auto',
-	textAlign:'center'
-	
-};
 
 
 class LoginForm extends React.Component{
 	render(){
 		return(
-			<div id='loginDiv' style={loginFormStyle}>
-				<input type='text' id='username' placeholder='Username' ref='username' />
-				<input type='password' id='password' placeholder='Password' ref='password' />
-				<button className='enterBtn' onClick={sendLoginData} >Enter</button>
+			<div id='loginDiv' style={styles.form.smallForm}>
+				<input type='text' id='username' placeholder='Username' name='username' />
+				<input type='password' id='password' placeholder='Password' name='password' />
+				<input type='submit' className='enterBtn'/>
 			</div>
 		);
 	}
