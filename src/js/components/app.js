@@ -2,6 +2,7 @@ import React from 'react';
 import MainView from './mainView';
 import ParentForm from './forms/parentForm';
 import NavBar from './navBar';
+import Filter from './catalog/filter';
 
 //// MAIN TO DO ///////
 /*
@@ -31,7 +32,7 @@ class App extends React.Component {
 			viewToRender = <ParentForm />;
 		}
 		else if(this.state.view === 'AccountView'){
-			viewToRender = <NavBar />
+			viewToRender = <Filter />
 		}
 
 		return (
