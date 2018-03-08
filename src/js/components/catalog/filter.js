@@ -1,5 +1,5 @@
 import React from 'react';
-
+const styles = require('../../styles');
 
 
 class Selection extends React.Component{
@@ -11,8 +11,9 @@ class Selection extends React.Component{
 
 	render(){
 		return(
-			<div>
-				<select value = {this.props.selectedVal} onChange={this.props.handler}>
+			<div style={styles.form.selectDiv}>
+				By:
+				<select style={styles.form.selectMenu} onChange={this.props.handler}>
 					<option value='title'>Title</option>
 					<option value='author'>Author</option>
 					<option value='genre'>Genre</option>
@@ -30,21 +31,29 @@ class Filter extends React.Component{
 		super(props);
 
 		this.state = {
-			selectedVal:'title'
+			selectedVal:'title',
+			search:''
+
 		}
 
 		this.handleSelectionChange = this.handleSelectionChange.bind(this);
 	}
 
 	handleSelectionChange(e){
-		console.log(this.state.selectedVal);
 		this.setState({selectedVal:e.target.value});
 
 	}
 
 	render(){
 		return(
-			<Selection handler={(e)=>this.handleSelectionChange(e)} />
+			<div style={styles.form.filter}>
+				<form>
+					Search:
+					<input style={styles.form.searchField}type='text' name='searchField'/>
+					<Selection handler={(e)=>this.handleSelectionChange(e)} />
+					<input type='submit' value='Submit'/>
+				</form>
+			</div>
 		)
 	}
 

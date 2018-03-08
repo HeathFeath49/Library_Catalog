@@ -8,6 +8,24 @@ module.exports = {
 			height: '300px',
 			margin:'auto',
 			textAlign:'center'
+		},
+
+		selectMenu:{
+			margin:'10px'
+		},
+
+		selectDiv:{
+			display:'inline',
+			padding:'10px'
+		},
+
+		filter:{
+			width:'30%',
+			padding:'10px'
+		},
+
+		searchField:{
+			marginLeft:'10px'
 		}
 	},
 
